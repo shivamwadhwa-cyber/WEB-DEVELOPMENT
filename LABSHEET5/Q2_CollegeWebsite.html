@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Website</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f2f2f2;
+        }
+
+        header {
+            background: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background: black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        section {
+            padding: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ABC College</h1>
+        <p>Welcome to Our College</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section id="home">
+        <h2>Home</h2>
+        <p>Welcome to ABC College.</p>
+        <button onclick="welcome()">Click Here</button>
+        <p id="msg"></p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Our college provides quality education to students.</p>
+    </section>
+
+    <section id="courses">
+        <h2>Courses</h2>
+        <p>BCA, BBA, B.Com</p>
+    </section>
+
+    <section id="faculty">
+        <h2>Faculty</h2>
+        <p>Our teachers guide students in their studies.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>College Campus | Library | Computer Lab</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: college@example.com</p>
+    </section>
+
+    <script>
+        function welcome() {
+            document.getElementById("msg").innerHTML =
+                "Welcome to ABC College!";
+        }
+    </script>
+
+</body>
+</html>

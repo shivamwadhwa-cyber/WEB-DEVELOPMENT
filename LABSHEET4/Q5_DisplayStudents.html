@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display XML Student Data</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Student Records from XML</h2>
+
+    <button onclick="loadStudents()">Load Student Data</button>
+
+    <p id="message"></p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+
+        <tbody id="studentData"></tbody>
+    </table>
+
+    <script>
+        async function loadStudents() {
+            let message = document.getElementById("message");
+            let tableBody = document.getElementById("studentData");
+
+            message.innerHTML = "";
+            tableBody.innerHTML = "";
+
+            try {
+                let response = await fetch("Q5_StudentData.xml");
+
+                if (!response.ok) {
+                    throw new Error("Unable to load XML file.");
+                }
+
+                let xmlText = await response.text();
+
+                let parser = new DOMParser();
+                let xmlDoc = parser.parseFromString(
+                    xmlText, "application/xml"
+                );
+
+                if (xmlDoc.querySelector("parsererror")) {
+                    throw new Error("Invalid XML document.");
+                }
+
+                let students = xmlDoc.getElementsByTagName("Student");
+
+                for (let i = 0; i < students.length; i++) {
+                    let id = students[i]
+                        .getElementsByTagName("StudentID")[0]
+                        .textContent;
+
+                    let name = students[i]
+                        .getElementsByTagName("Name")[0]
+                        .textContent;
+
+                    let course = students[i]
+                        .getElementsByTagName("Course")[0]
+                        .textContent;
+
+                    let marks = students[i]
+                        .getElementsByTagName("Marks")[0]
+                        .textContent;
+
+                    let row = document.createElement("tr");
+
+                    [id, name, course, marks].forEach(function(value) {
+                        let cell = document.createElement("td");
+                        cell.textContent = value;
+                        row.appendChild(cell);
+                    });
+
+                    tableBody.appendChild(row);
+                }
+
+                message.innerHTML = "Student data loaded successfully!";
+
+            } catch (error) {
+                message.innerHTML = error.message;
+            }
+        }
+    </script>
+
+</body>
+</html>

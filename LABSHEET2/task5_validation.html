@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Form Validation</title>
+<style>
+body { font-family:Arial; background:#f2f5f9; padding:30px; }
+.form-box { max-width:550px; margin:auto; background:white; padding:25px; border-radius:10px;
+box-shadow:0 4px 15px rgba(0,0,0,.12); }
+label { display:block; margin-top:12px; font-weight:bold; }
+input { width:100%; padding:10px; margin-top:5px; box-sizing:border-box; border:1px solid #aaa; border-radius:5px; }
+button { margin-top:18px; padding:11px 22px; border:0; border-radius:5px; background:#17365d; color:white; }
+.error { color:#c62828; font-size:14px; margin-top:4px; min-height:17px; }
+.success { color:#2e7d32; font-weight:bold; margin-top:15px; }
+</style>
+</head>
+<body>
+<div class="form-box">
+<h1>Student Registration</h1>
+
+<form id="registrationForm" onsubmit="return validateForm()">
+<label for="name">Name:</label>
+<input type="text" id="name">
+<div id="nameError" class="error"></div>
+
+<label for="email">Email:</label>
+<input type="text" id="email">
+<div id="emailError" class="error"></div>
+
+<label for="mobile">Mobile Number:</label>
+<input type="text" id="mobile">
+<div id="mobileError" class="error"></div>
+
+<label for="password">Password:</label>
+<input type="password" id="password">
+<div id="passwordError" class="error"></div>
+
+<label for="age">Age:</label>
+<input type="number" id="age">
+<div id="ageError" class="error"></div>
+
+<button type="submit">Submit</button>
+<div id="successMessage" class="success"></div>
+</form>
+</div>
+
+<script>
+function validateForm() {
+    let valid = true;
+
+    document.querySelectorAll(".error").forEach(e => e.textContent = "");
+    document.getElementById("successMessage").textContent = "";
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mobile = document.getElementById("mobile").value.trim();
+    const password = document.getElementById("password").value;
+    const age = document.getElementById("age").value.trim();
+
+    if (name === "" || !/^[A-Za-z ]+$/.test(name)) {
+        document.getElementById("nameError").textContent =
+            "Please enter a valid name using letters and spaces only.";
+        valid = false;
+    }
+
+    if (email === "" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById("emailError").textContent =
+            "Please enter a valid email address.";
+        valid = false;
+    }
+
+    if (!/^\d{10}$/.test(mobile)) {
+        document.getElementById("mobileError").textContent =
+            "Mobile number must contain exactly 10 digits.";
+        valid = false;
+    }
+
+    if (password.length < 6) {
+        document.getElementById("passwordError").textContent =
+            "Password must contain at least 6 characters.";
+        valid = false;
+    }
+
+    const ageNumber = Number(age);
+    if (age === "" || !Number.isInteger(ageNumber) || ageNumber < 17 || ageNumber > 100) {
+        document.getElementById("ageError").textContent =
+            "Age must be a whole number between 17 and 100.";
+        valid = false;
+    }
+
+    if (valid) {
+        document.getElementById("successMessage").textContent =
+            "Registration successful. All fields are valid.";
+    }
+
+    return false; // Keep the lab page open while testing validation.
+}
+</script>
+</body>
+</html>

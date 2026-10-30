@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial Calculator</title>
+</head>
+<body>
+
+    <h2>Factorial Calculator</h2>
+
+    <label>Enter a Number:</label>
+    <input type="number" id="num" min="0" step="1">
+    <br><br>
+
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculateFactorial() {
+            let num = document.getElementById("num").value;
+
+            if (num === "") {
+                document.getElementById("result").innerHTML =
+                    "Please enter a number.";
+                return;
+            }
+
+            num = Number(num);
+
+            if (!Number.isInteger(num) || num < 0) {
+                document.getElementById("result").innerHTML =
+                    "Please enter a non-negative whole number.";
+                return;
+            }
+
+            let factorial = 1;
+
+            for (let i = 1; i <= num; i++) {
+                factorial = factorial * i;
+            }
+
+            document.getElementById("result").innerHTML =
+                "Factorial of " + num + " is " + factorial;
+        }
+    </script>
+
+</body>
+</html>

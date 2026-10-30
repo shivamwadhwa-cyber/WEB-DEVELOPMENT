@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Students>
+    <Student>
+        <StudentID>101</StudentID>
+        <Name>Rahul Sharma</Name>
+        <Course>BCA</Course>
+        <Marks>85</Marks>
+    </Student>
+
+    <Student>
+        <StudentID>102</StudentID>
+        <Name>Aman Verma</Name>
+        <Course>BCA</Course>
+        <Marks>78</Marks>
+    </Student>
+
+    <Student>
+        <StudentID>103</StudentID>
+        <Name>Priya Singh</Name>
+        <Course>BCA</Course>
+        <Marks>92</Marks>
+    </Student>
+
+    <Student>
+        <StudentID>104</StudentID>
+        <Name>Neha Gupta</Name>
+        <Course>BCA</Course>
+        <Marks>88</Marks>
+    </Student>
+
+    <Student>
+        <StudentID>105</StudentID>
+        <Name>Rohit Kumar</Name>
+        <Course>BCA</Course>
+        <Marks>75</Marks>
+    </Student>
+</Students>

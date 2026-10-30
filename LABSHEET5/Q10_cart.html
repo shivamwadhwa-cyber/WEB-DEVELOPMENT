@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Shopping Cart</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalogue.html">Catalogue</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Selected Books</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Book Name</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody id="cartRows"></tbody>
+        </table>
+
+        <h2>Total Amount: <span id="cartTotal">₹0.00</span></h2>
+
+        <a class="button" href="catalogue.html">Continue Shopping</a>
+
+        <button onclick="alert('Demo checkout only!')">
+            Checkout
+        </button>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        renderCart();
+    </script>
+
+</body>
+</html>

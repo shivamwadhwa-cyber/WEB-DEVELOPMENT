@@ -1,0 +1,34 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Features</title>
+</head>
+<body>
+
+    <h1 id="heading">Welcome to JavaScript</h1>
+
+    <p id="text">This is the original text.</p>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="showDate()">Show Date and Time</button>
+
+    <p id="date"></p>
+
+    <script>
+        function changeText() {
+            document.getElementById("heading").innerHTML =
+                "Text Changed Successfully!";
+
+            document.getElementById("text").innerHTML =
+                "JavaScript changes webpage content.";
+        }
+
+        function showDate() {
+            document.getElementById("date").innerHTML =
+                new Date();
+        }
+    </script>
+
+</body>
+</html>

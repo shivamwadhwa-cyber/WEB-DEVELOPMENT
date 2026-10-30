@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>User Registration</h1>
+    </header>
+
+    <main>
+        <form onsubmit="return validateRegistration()">
+
+            <label>Name</label>
+            <input type="text" id="regName" required>
+
+            <label>Email</label>
+            <input type="email" id="regEmail" required>
+
+            <label>Password</label>
+            <input type="password" id="regPassword"
+                   minlength="8" required>
+
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male"> Male
+            <input type="radio" name="gender" value="female"> Female
+
+            <label>Favourite Category</label>
+            <select>
+                <option>Programming</option>
+                <option>Fiction</option>
+                <option>Biography</option>
+                <option>Academic</option>
+            </select>
+
+            <label>
+                <input type="checkbox" required>
+                I agree to the terms
+            </label>
+
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+
+            <p id="regMessage"></p>
+
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

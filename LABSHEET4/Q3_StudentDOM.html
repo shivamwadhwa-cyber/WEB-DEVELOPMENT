@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Information</title>
+</head>
+<body>
+
+    <h2 id="heading">Student Information</h2>
+
+    <ul id="studentList">
+        <li>Rahul Sharma</li>
+        <li>Aman Verma</li>
+        <li>Priya Singh</li>
+        <li>Neha Gupta</li>
+        <li>Rohit Kumar</li>
+    </ul>
+
+    <button onclick="displayStudents()">Display Students</button>
+
+    <h3>Output:</h3>
+    <p id="result"></p>
+
+    <script>
+        function displayStudents() {
+
+            // Using getElementById()
+            let heading = document.getElementById("heading");
+
+            // Using getElementsByTagName()
+            let students = document.getElementsByTagName("li");
+
+            // Using querySelector()
+            let firstStudent = document.querySelector("#studentList li");
+
+            let output = heading.innerHTML + "<br><br>";
+
+            output += "Total Students: " + students.length + "<br>";
+
+            output += "Student Names:<br>";
+
+            for (let i = 0; i < students.length; i++) {
+                output += (i + 1) + ". " +
+                    students[i].innerHTML + "<br>";
+            }
+
+            output += "<br>First Student: " +
+                firstStudent.innerHTML;
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
+

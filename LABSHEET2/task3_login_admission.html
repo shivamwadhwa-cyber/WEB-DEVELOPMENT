@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login and College Admission Form</title>
+<style>
+body { font-family:Arial,sans-serif; margin:0; padding:25px; background:#f3f5f7; }
+.container { max-width:1000px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.card { background:white; padding:25px; border:1px solid #ddd; border-radius:10px; }
+h1 { text-align:center; grid-column:1/-1; }
+h2 { margin-top:0; }
+label { display:block; margin:10px 0 5px; font-weight:bold; }
+input, select, textarea { width:100%; padding:9px; border:1px solid #aaa; border-radius:5px; }
+button { margin-top:15px; padding:10px 18px; border:0; border-radius:5px; background:#17365d; color:white; cursor:pointer; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Login and College Admission Form</h1>
+
+<div class="card">
+<h2>Login Form</h2>
+<form action="#" method="post">
+<label for="loginEmail">Email:</label>
+<input type="email" id="loginEmail" required>
+<label for="loginPassword">Password:</label>
+<input type="password" id="loginPassword" required>
+<button type="submit">Login</button>
+</form>
+</div>
+
+<div class="card">
+<h2>College Admission Form</h2>
+<form action="#" method="post">
+<label for="studentName">Student Name:</label>
+<input type="text" id="studentName" required>
+<label for="admissionEmail">Email:</label>
+<input type="email" id="admissionEmail" required>
+<label for="phone">Mobile Number:</label>
+<input type="tel" id="phone" required>
+<label for="course">Course:</label>
+<select id="course" required>
+<option value="">Select Course</option>
+<option>BCA</option><option>BBA</option><option>B.Tech</option><option>MCA</option>
+</select>
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob" required>
+<label for="address">Address:</label>
+<textarea id="address" rows="3"></textarea>
+<button type="submit">Apply for Admission</button>
+</form>
+</div>
+</div>
+</body>
+</html>

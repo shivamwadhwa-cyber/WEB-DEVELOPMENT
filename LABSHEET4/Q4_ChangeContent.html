@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Webpage Content</title>
+</head>
+<body>
+
+    <h1 id="heading">Welcome to JavaScript</h1>
+
+    <p id="paragraph">
+        This is the original paragraph.
+    </p>
+
+    <button onclick="changeContent()">Click Me</button>
+
+    <script>
+        function changeContent() {
+
+            document.getElementById("heading").innerHTML =
+                "JavaScript DOM Manipulation";
+
+            document.getElementById("paragraph").innerHTML =
+                "The heading, paragraph, and background color have changed!";
+
+            document.body.style.backgroundColor = "lightblue";
+        }
+    </script>
+
+</body>
+</html>

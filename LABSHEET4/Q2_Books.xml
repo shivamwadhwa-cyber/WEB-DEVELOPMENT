@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Books>
+    <Book>
+        <BookID>B101</BookID>
+        <Title>Java Programming</Title>
+        <Author>James Gosling</Author>
+        <Publisher>Tech Publications</Publisher>
+        <Price>450</Price>
+        <Category>Programming</Category>
+    </Book>
+
+    <Book>
+        <BookID>B102</BookID>
+        <Title>Python Basics</Title>
+        <Author>John Smith</Author>
+        <Publisher>ABC Publications</Publisher>
+        <Price>350</Price>
+        <Category>Programming</Category>
+    </Book>
+
+    <Book>
+        <BookID>B103</BookID>
+        <Title>Web Development</Title>
+        <Author>David Miller</Author>
+        <Publisher>XYZ Publications</Publisher>
+        <Price>500</Price>
+        <Category>Web Technology</Category>
+    </Book>
+
+    <Book>
+        <BookID>B104</BookID>
+        <Title>Database Management</Title>
+        <Author>Ramesh Gupta</Author>
+        <Publisher>Learning Press</Publisher>
+        <Price>400</Price>
+        <Category>Database</Category>
+    </Book>
+
+    <Book>
+        <BookID>B105</BookID>
+        <Title>Data Structures</Title>
+        <Author>Mark Allen</Author>
+        <Publisher>Knowledge Press</Publisher>
+        <Price>550</Price>
+        <Category>Computer Science</Category>
+    </Book>
+</Books>

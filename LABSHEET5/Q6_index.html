@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ReadMore Book Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>ReadMore Book Store</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="catalogue.html">Catalogue</a>
+            <a href="details.html">Book Details</a>
+            <a href="register.html">Register</a>
+            <a href="login.html">Login</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to ReadMore</h2>
+        <p>Discover your next favourite book!</p>
+        <a class="button" href="catalogue.html">Explore Books</a>
+    </section>
+
+    <main>
+        <h2>Book Categories</h2>
+
+        <div class="categories">
+            <div>Fiction</div>
+            <div>Biography</div>
+            <div>Programming</div>
+            <div>Academic</div>
+            <div>Self-help</div>
+        </div>
+
+        <h2>Featured Books</h2>
+        <div id="featured" class="book-grid"></div>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+        renderFeatured();
+    </script>
+
+</body>
+</html>

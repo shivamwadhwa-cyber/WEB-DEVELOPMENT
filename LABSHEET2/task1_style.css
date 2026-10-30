@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    margin: 0;
+    padding: 30px;
+    background: #f2f5f9;
+}
+.form-container {
+    max-width: 650px;
+    margin: auto;
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+}
+input[type="text"], input[type="email"], input[type="password"],
+select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+}
+.inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.inline label {
+    font-weight: normal;
+    margin: 0;
+}
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+button {
+    flex: 1;
+    padding: 11px;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #1769aa;
+    color: white;
+    font-size: 16px;
+}
+button.reset {
+    background: #666;
+}

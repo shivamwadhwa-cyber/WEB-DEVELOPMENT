@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+        }
+
+        .profile {
+            background: white;
+            padding: 20px;
+            margin: 30px auto;
+            width: 350px;
+            border-radius: 10px;
+        }
+
+        button {
+            background: navy;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="profile">
+        <h1 id="name">Your Name</h1>
+        <p>BCA Student</p>
+
+        <h3>Education</h3>
+        <p>Bachelor of Computer Applications</p>
+
+        <h3>Skills</h3>
+        <p>HTML, CSS, JavaScript, C++</p>
+
+        <h3>Hobbies</h3>
+        <p>Reading, Coding, Playing Games</p>
+
+        <h3>Contact</h3>
+        <p>Email: student@example.com</p>
+
+        <button onclick="showMessage()">Click Me</button>
+        <p id="message"></p>
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").innerHTML =
+                "Welcome to my profile!";
+        }
+    </script>
+
+</body>
+</html>
